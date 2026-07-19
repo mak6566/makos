@@ -332,10 +332,11 @@ export default function Desktop() {
       {booting && <BootScreen onDone={handleBootDone} />}
       {showGreeting && <GreetingModal onClose={() => setShowGreeting(false)} />}
 
-      <main
+   <main
         className="fixed inset-0 overflow-hidden"
         style={{
-          backgroundImage: `url(${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/wallpaper.jpg)`,
+          // Použijeme import.meta.env.BASE_URL namiesto process.env...
+          backgroundImage: `url('${import.meta.env.BASE_URL}wallpaper.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
