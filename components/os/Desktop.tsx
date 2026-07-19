@@ -335,7 +335,7 @@ export default function Desktop() {
       <main
         className="fixed inset-0 overflow-hidden"
         style={{
-          backgroundImage: 'url(/wallpaper.jpg)',
+          backgroundImage: `url(${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/wallpaper.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
