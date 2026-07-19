@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Share Tech Mono', 'Courier New', monospace;
+  --font-mono: 'Share Tech Mono', 'Courier New', monospace;
+  --font-pixel: 'Press Start 2P', monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-border: var(--border);
+  --color-os-win: var(--os-win);
+  --color-os-header: var(--os-header);
+  --color-os-topbar: var(--os-topbar);
+  --color-os-accent: var(--os-accent);
+  --color-os-close: var(--os-close);
+  --color-os-minimize: var(--os-minimize);
+}
+
+:root {
+  color-scheme: dark;
+  --background: #0d0d0d;
+  --foreground: #d0d0d0;
+  --primary: #1793d1;
+  --border: #1793d1;
+  --muted-foreground: #888;
+
+  --os-win: #111111;
+  --os-header: #1a1a1a;
+  --os-topbar: #0a0a0a;
+  --os-accent: #1793d1;
+  --os-close: #cc3333;
+  --os-minimize: #cc9900;
+
+  --arch-blue: #1793d1;
+  --arch-green: #4ec94e;
+  --arch-dim: #555;
+}
+
+* {
+  box-sizing: border-box;
+  image-rendering: pixelated;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--foreground);
+  background-color: var(--background);
+  -webkit-font-smoothing: none;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #1a1a1a; }
+::-webkit-scrollbar-thumb { background: #1793d1; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #38b0f0; }
+
+.drag-handle { cursor: crosshair; }
+.drag-handle:active { cursor: move; }
+
+.pixel-win {
+  border: 2px solid #1793d1;
+  box-shadow: 4px 4px 0px #000, inset 0 0 0 1px #000;
+}
+
+.pixel-win-header {
+  background: #1793d1;
+  border-bottom: 2px solid #0d6faa;
+}
+
+.pixel-btn {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  border: 2px solid #1793d1;
+  background: #111;
+  color: #1793d1;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-radius: 0 !important;
+  transition: background 0.1s, color 0.1s;
+}
+.pixel-btn:hover { background: #1793d1; color: #000; }
+.pixel-btn:active { transform: translate(1px, 1px); }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes bootSlideUp {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pixelIn {
+  0%   { opacity: 0; transform: scale(0.95) translateY(-6px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
