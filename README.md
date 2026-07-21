@@ -1,27 +1,28 @@
+
 # Personal Web OS
 
-A web-based personal operating system interface designed to run directly in your browser. The visual style and user experience are inspired by Linux desktop environments, specifically drawing aesthetic cues from Arch Linux to provide a minimalist, clean, and functional layout.
+A minimalist, browser-based desktop environment inspired by Arch Linux. Built with modern React, this project brings a clean and functional web desktop interface right into your browser.
 
 ## Overview
 
-This project simulates a desktop environment on the web, offering a customizable, interactive interface. It was built using modern React to deliver a smooth, application-like experience.
+Personal Web OS simulates a lightweight desktop experience on the web. The goal of this project is to provide a customized, interactive space with custom web applications, a floating window management feel, and a clean UI styled after Linux environments.
 
 ## Local Development
 
-To run this project on your local machine, ensure you have a package manager like Bun, npm, or pnpm installed.
+Want to run or tweak this project locally? You'll need a package manager like Bun (recommended), npm, or pnpm.
 
-1. Install the required dependencies:
-```bash
-bun install
-```
+1. Install dependencies:
+   `bun install`
 
-2. Start the local development server:
-```bash
-bun dev
-```
+2. Start the development server:
+   `bun dev`
 
-The application will be available locally (usually at `http://localhost:8080` or `http://localhost:3000`).
+3. Open your browser and navigate to http://localhost:8080 (or the port shown in your terminal).
+
+## Deployment
+
+This project is configured to build as a static application and can be hosted seamlessly on platforms like GitHub Pages, Vercel, or Netlify. If deploying to GitHub Pages, make sure your build output and base path match your repository structure.
 
 ## License
 
-Private / personal project.
+Personal project — feel free to explore the code!
